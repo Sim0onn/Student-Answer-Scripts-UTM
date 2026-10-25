@@ -12,7 +12,7 @@ Automatic classification of scanned exam answer scripts, with two goals:
 ```
  data/raw/                   original scanned scripts (SET 1 … SET 5)
      │
-     │  01_cleaning.ipynb    red ink removal, alignment, cropping into exercises
+     │  01_cleaning.ipynb    red ink removal, cropping into exercises
      ▼
  data/cleaned/               1 image per exercise per student, unsorted
      │
