@@ -2,14 +2,11 @@
 
 Automatic classification of scanned exam answer scripts, with two goals:
 
-1. **Exercise level**: is the answer to an exercise correct or incorrect? → **CNN**
-2. **Student level**: based on all of their exercises, is the student good or not? → **LSTM**
-
----
+1.Exercise level: is the answer to an exercise correct or incorrect? → **CNN**
+2.Student level: based on all of their exercises, is the student good or not? → **LSTM**
 
 ## Overview
 
-```
  data/raw/                   original scanned scripts (SET 1 … SET 5)
      │
      │  01_cleaning.ipynb    red ink removal, cropping into exercises
@@ -24,14 +21,12 @@ Automatic classification of scanned exam answer scripts, with two goals:
      ▼
  data/processed/             .npy arrays ready for training
      │
-     │  03_train_exercise_cnn.ipynb         EfficientNetV2-S, 5-fold cross-validation
+     │  03_train_exercise_cnn.ipynb         EfficientNetV2-S, V2-M, ConvNeXt-Tiny, 5-fold cross-validation
      ▼
- outputs/exercise_cnn/       trained models + curves + confusion matrix
-```
+ outputs/exercise_cnn/       per-model results + comparison table
 
 ## Folder structure
 
-```
 UTM/
 ├── data/                  ← not versioned (too large, can be regenerated)
 │   ├── raw/
@@ -40,5 +35,4 @@ UTM/
 │   └── processed/
 ├── notebooks/             ← run in numerical order
 ├── outputs/               ← training results (.pth not versioned, .png versioned)
-└── docs/                  ← literature review, CNN/LSTM comparison tables, preprocessing docs (EN/FR)
-```
+└── docs/                  ← literature review, CNN/LSTM comparison tables, data-cleaning and preprocessing docs (EN/FR)
