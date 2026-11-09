@@ -1,17 +1,14 @@
 # Student Answer Scripts – UTM
 
-Automatic marking of scanned exam answer scripts. Each answer is classified as correct or incorrect, the marks (correct = 1, wrong = 0) are summed per student, and the result is compared with the lecturer's marks.
+Automatic marking of scanned exam answer scripts. Each answer is classified as correct or incorrect.
 
-The work is split into 4 phases:
+Current work: **CNN model selection**, comparing three CNN models on answer classification (correct / incorrect).
 
-1. **CNN model selection**: compare three CNN models on answer classification (correct / incorrect)
-2. **Automated marking (CNN)**: mark the students with the best CNN and compare with the lecturer's marks
-3. **LSTM model development** *(to come)*: same classification, from the answer images converted into sequences (sequential image features)
-4. **Automated marking (LSTM)** *(to come)*: same as phase 2, with the best LSTM
 
 ## Overview
 
- data/raw/                   original scanned scripts (SET 1 … SET 5)
+```
+ data/raw/                   original scanned scripts (SET 1, SET 2, ...)
      │
      │  01_cleaning.ipynb    red ink removal, cropping into exercises
      ▼
@@ -25,14 +22,44 @@ The work is split into 4 phases:
      ▼
  data/processed/             .npy arrays ready for training
      │
-     │  03_train_cnn.ipynb            phase 1: EfficientNetV2-S, V2-M, ConvNeXt-Tiny, 5-fold cross-validation
+     │  03_train_cnn.ipynb            EfficientNetV2-S, V2-M, ConvNeXt-Tiny, 5-fold cross-validation
      ▼
  outputs/exercise_cnn/       per-model results + comparison table
+```
 
-The next notebooks will follow the order of the phases: phase 2 (CNN marking), then the LSTM part (preprocessing into sequences, training, marking).
+## Setup
+
+```
+pip install -r requirements.txt
+```
+
+A GPU is recommended for `03_train_cnn.ipynb`. To use it, install the CUDA build of `torch` and `torchvision` 
+by following the command given on [pytorch.org](https://pytorch.org/get-started/locally/).
+
+## Raw data
+
+`data/` is not versioned. Put the scans in `data/raw/`, with one folder per student and one image per page:
+
+```
+data/raw/
+├── SET 1/
+│   ├── 01.jpg             ← cover page
+│   ├── 02.jpg
+│   ├── ...
+│   └── 15.jpg
+├── SET 2/
+└── ...
+```
+
+## Manual labeling
+
+This is the only step that is not automated. After `01_cleaning.ipynb`, copy each image of `data/cleaned/by_exercise/qXX/` 
+into `data/labeled/by_exercise/qXX/correct/` or `data/labeled/by_exercise/qXX/incorrect/`, depending on the teacher's correction. 
+Keep the file names (`set_X_qXX.jpg`), they tell which student and which exercise each image comes from.
 
 ## Folder structure
 
+```
 UTM/
 ├── data/                  ← not versioned (too large, can be regenerated)
 │   ├── raw/
@@ -41,4 +68,6 @@ UTM/
 │   └── processed/
 ├── notebooks/             ← run in numerical order
 ├── outputs/               ← training results (.pth not versioned, .png versioned)
-└── docs/                  ← literature review, CNN/LSTM comparison tables, data-cleaning and preprocessing docs (EN/FR)
+├── docs/                  ← literature review, CNN/LSTM comparison tables, data-cleaning, preprocessing and CNN training docs (EN/FR)
+└── requirements.txt
+```
