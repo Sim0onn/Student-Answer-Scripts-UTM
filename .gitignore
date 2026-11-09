@@ -1,3 +1,8 @@
-/data
+# data: keep the folder structure, ignore the images and arrays (too large, sensitive)
+/data/**
+!/data/**/
+!/data/**/.gitkeep
+
 /outputs/**/*.pth
+/outputs/**/*.npy
 .ipynb_checkpoints/

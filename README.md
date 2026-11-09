@@ -38,7 +38,7 @@ by following the command given on [pytorch.org](https://pytorch.org/get-started/
 
 ## Raw data
 
-`data/` is not versioned. Put the scans in `data/raw/`, with one folder per student and one image per page:
+Only the folder structure of `data/` is versioned (empty `.gitkeep` files), the images are not. Put the scans in `data/raw/`, with one folder per student and one image per page:
 
 ```
 data/raw/
@@ -61,13 +61,13 @@ Keep the file names (`set_X_qXX.jpg`), they tell which student and which exercis
 
 ```
 UTM/
-├── data/                  ← not versioned (too large, can be regenerated)
+├── data/                  ← only the folder structure is versioned (images too large and sensitive)
 │   ├── raw/
 │   ├── cleaned/
 │   ├── labeled/
 │   └── processed/
 ├── notebooks/             ← run in numerical order
-├── outputs/               ← training results (.pth not versioned, .png versioned)
+├── outputs/               ← training results (.pth and .npy not versioned, .png versioned)
 ├── docs/                  ← literature review, CNN/LSTM comparison tables, data-cleaning, preprocessing and CNN training docs (EN/FR)
 └── requirements.txt
 ```
