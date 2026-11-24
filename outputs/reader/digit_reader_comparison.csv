@@ -1,0 +1,4 @@
+﻿,MNIST test accuracy,Reading accuracy (copies labelled correct),Verdict balanced accuracy,Training time (min)
+small_cnn,0.996,0.611,0.806,2.759
+resnet18,0.997,0.63,0.815,1.653
+efficientnet_b0,0.995,0.593,0.796,2.269

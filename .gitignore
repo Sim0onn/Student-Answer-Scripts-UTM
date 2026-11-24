@@ -1,8 +1,8 @@
-# data: keep the folder structure, ignore the images and arrays (too large, sensitive)
-/data/**
-!/data/**/
-!/data/**/.gitkeep
+# data: not versioned (images and arrays too large, sensitive)
+/data/
 
+# trained models: not versioned (too large)
+/models/
 /outputs/**/*.pth
 /outputs/**/*.npy
 .ipynb_checkpoints/

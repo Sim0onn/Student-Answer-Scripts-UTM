@@ -1,0 +1,32 @@
+exercise,batch,type,instruction,expected,source
+q01,1,circle,Bulatkan nombor yang disebut guru (circle the number said by the teacher),6,confirmed by the user (number dictated by the teacher)
+q02,1,colour,Warnakan nombor yang paling kecil (colour the smallest number among 7 2 5),2,worksheet
+q03,1,link,Padankan nombor yang sama (match the same numbers),3->3 | 11->11 | 5->5 | 16->16 (left 3 11 5 16 to right positions 3 4 1 2),worksheet
+q07,1,link,Padankan pada bilangan yang sama banyak (match the same quantity),4 rabbits -> box 2 (4 rabbits),worksheet
+q08,1,link,Padankan pada bilangan yang sama banyak (match the same quantity),8 bags -> box 1 (8 bags),worksheet
+q09,1,tick,Tanda pada bilangan yang sedikit (tick the smallest quantity),box 2,worksheet
+q10,1,tick,Tanda pada bilangan yang sedikit (tick the smallest quantity),box 3,worksheet
+q11,1,tick,Tanda pada bilangan yang lebih banyak (tick the largest quantity),box 3,worksheet
+q12,1,tick,Tanda pada bilangan yang lebih banyak (tick the largest quantity),box 3,worksheet
+q13,1,link,Bilang dan padankan (count 8 dolphins and match),8 (box 3),worksheet
+q14,1,link,Bilang dan padankan (count 9 houses and match),9 (box 2),worksheet
+q15,1,write_number,Bilang dan tulis nombor (count the sharpeners and write the number),13,worksheet
+q16,1,write_number,Bilang dan tulis nombor (count the chillies and write the number),15,worksheet
+q17,1,write_number,Lengkapkan turutan nombor menaik (42 43 _ 45),44,worksheet
+q18,1,write_number,Lengkapkan turutan nombor menurun (26 25 24 _ 22),23,worksheet
+q19,1,write_number,Kira jumlah (3 bicycles + 5 bicycles),8,worksheet
+q20,1,write_number,Jumlahkan (2 + 5),7,worksheet
+q21,1,write_number,Jumlahkan (6 umbrellas + 7 umbrellas),13,worksheet
+q22,1,write_number,Tambahkan (9 + 3 in columns),12,worksheet
+q23,1,write_number,Jumlahkan (30 + 40),70,worksheet
+q24,1,write_number,Jumlahkan (43 + 21 in columns),64,worksheet
+q25,1,write_number,Tolakkan (8 - 3),5,worksheet
+q26,1,write_number,Tolakkan (9 - 2),7,worksheet
+q27,1,write_number,Tolakkan (16 - 7),9,worksheet
+q28,1,write_number,Tolakkan (18 - 6),12,worksheet
+q29,1,write_number,Tolakkan (49 - 7 in columns),42,worksheet
+q30,1,write_number,Tolakkan (78 - 27 in columns),51,worksheet
+q31,2,colour,Balang manakah yang ada dua objek? Warnakan (colour the jars with two objects),lollipops + strawberries + crayons (not buttons / sweet / blocks),worksheet
+q32,2,colour,Haiwan makan 5 biji buah. Warnakan bilangan buah yang telah dimakan (colour the 5 fruits eaten),5 fruits in each of the 3 boxes,worksheet
+q33,2,colour,Bilang roti di atas dulang. Warnakan nombor yang betul (count the 8 pretzels and colour the right number),8,worksheet
+q34,2,trace,Bilang objek dan surih nombor yang betul (count and trace the right number),1:6 | 2:9 | 3:7 | 4:8 | 5:9 | 6:10,worksheet

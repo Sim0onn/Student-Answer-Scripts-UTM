@@ -1,0 +1,37 @@
+﻿model,subset,copies,Accuracy,Balanced accuracy,Macro F1,Recall (incorrect)
+efficientnet_v2_s,all,174,0.483,0.493,0.48,0.537
+efficientnet_v2_s,batch 1,135,0.43,0.386,0.386,0.282
+efficientnet_v2_s,batch 2,39,0.667,0.492,0.463,0.893
+efficientnet_v2_s,type circle,5,0.2,0.125,0.167,0.0
+efficientnet_v2_s,type colour,35,0.629,0.538,0.53,0.826
+efficientnet_v2_s,type link,25,0.64,0.535,0.532,0.333
+efficientnet_v2_s,type tick,20,0.55,0.433,0.436,0.2
+efficientnet_v2_s,type trace,9,0.667,0.5,0.4,1.0
+efficientnet_v2_s,type write_number,80,0.35,0.339,0.335,0.308
+efficientnet_v2_m,all,174,0.374,0.435,0.356,0.701
+efficientnet_v2_m,batch 1,135,0.281,0.35,0.281,0.513
+efficientnet_v2_m,batch 2,39,0.692,0.482,0.409,0.964
+efficientnet_v2_m,type circle,5,0.0,0.0,0.0,0.0
+efficientnet_v2_m,type colour,35,0.6,0.457,0.375,0.913
+efficientnet_v2_m,type link,25,0.4,0.434,0.384,0.5
+efficientnet_v2_m,type tick,20,0.3,0.267,0.271,0.2
+efficientnet_v2_m,type trace,9,0.667,0.5,0.4,1.0
+efficientnet_v2_m,type write_number,80,0.275,0.363,0.263,0.615
+convnext_tiny,all,174,0.42,0.442,0.42,0.537
+convnext_tiny,batch 1,135,0.341,0.308,0.311,0.231
+convnext_tiny,batch 2,39,0.692,0.482,0.409,0.964
+convnext_tiny,type circle,5,0.6,0.375,0.375,0.0
+convnext_tiny,type colour,35,0.686,0.582,0.573,0.913
+convnext_tiny,type link,25,0.52,0.399,0.405,0.167
+convnext_tiny,type tick,20,0.4,0.333,0.341,0.2
+convnext_tiny,type trace,9,0.667,0.5,0.4,1.0
+convnext_tiny,type write_number,80,0.237,0.246,0.235,0.269
+baseline,all,174,0.615,0.5,0.381,0.0
+baseline,batch 1,135,0.711,0.5,0.416,0.0
+baseline,batch 2,39,0.282,0.5,0.22,0.0
+baseline,type circle,5,0.8,0.5,0.444,0.0
+baseline,type colour,35,0.343,0.5,0.255,0.0
+baseline,type link,25,0.76,0.5,0.432,0.0
+baseline,type tick,20,0.75,0.5,0.429,0.0
+baseline,type trace,9,0.333,0.5,0.25,0.0
+baseline,type write_number,80,0.675,0.5,0.403,0.0
